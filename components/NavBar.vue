@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav :class="pageScrolledY ? 'navbar navbar-expand-lg navbar-light bg-light fixed-top':'navbar navbar-expand-lg navbar-light bg-transparent fixed-top'">
         <div class="container">
             <div class="d-flex justify-content-end w-100 d-lg-none">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,6 @@
 <script>
 export default {
     name: 'NavBar',
-
     data() {
         return {
             navLinks:[
@@ -54,16 +53,38 @@ export default {
                     id: 2
                 },
 
-            ]
+            ],
+            pageScrolledVertically: false
         }
     },
 
     computed:{
        isActive(){
         return this.$route.path
+       },
+
+       pageScrolledY()
+       {
+        return this.pageScrolledVertically
        }
        
        
+    },
+    mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+    methods:{
+      handleScroll() {
+        if (window.scrollY > 0) {
+          this.pageScrolledVertically = true
+        } else {
+          this.pageScrolledVertically = false
+        }
+      }
     }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar/>
-        <main class="container">
+        <main class="container py-5">
             <slot/>
         </main>
         <AppFooter/>
