@@ -2,7 +2,7 @@
     <nav :class="pageScrolledY ? 'navbar navbar-expand-lg navbar-light bg-light fixed-top':'navbar navbar-expand-lg navbar-light bg-light bg-lg-transparent fixed-top'">
         <div class="container">
             <div class="d-flex justify-content-end w-100 d-lg-none">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"/>
                   </button>
             </div>

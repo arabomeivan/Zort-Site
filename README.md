@@ -9,14 +9,15 @@ Zort uses the power of artificial intelligence and data analytics to give you th
 
 ## 🧠 Project Features
 
-- **Dynamic Routing**  
-  Built using Nuxt 3’s file-based dynamic routing to create individual article pages from API data.
+- **Routing**  
+  Built using Nuxt 3’s file-based routing to create individual article pages from API data.
+
+- **Article Search Funtionality** 
+ 
+-**Formspree.io Implementation for the Contact Us Section**
 
 - **REST API Integration**  
   Articles are fetched dynamically via REST API calls for real-time and scalable content.
-
-- **Pagination**  
-  Seamlessly loads articles in chunks to keep things fast and organized.
 
 - **Performance Optimization**  
   Leveraged Nuxt’s built-in tools like the `<NuxtImg>` component for optimized image loading and responsive design.

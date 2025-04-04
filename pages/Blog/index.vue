@@ -4,13 +4,13 @@
         <h2 class="text-center"><span class="text-black">Welcome to</span> <span class="text-primary">Zort Blog</span></h2>
     <p class="text-center">Subscribe to learn about betting strategies, trends the latest in analysis, solutions, and updates.</p>
 
-    <form class="subscribe-form mx-auto d-flex gap-2 justify-content-center w-50" @submit.prevent="handleSubmit">
-    <input v-model="email" type="email" class="form-control" placeholder="Enter your email" required>
+    <form class="subscribe-form mx-auto d-flex gap-2 justify-content-center w-50">
+    <input v-model="searchQuery" type="email" class="form-control" placeholder="Search for Posts" required>
     <button class="btn text-white" type="submit">Search</button>
     </form>
 
     <div v-if="isLoading" class="d-flex justify-content-center my-3">
-        <div class="spinner-border" role="status">
+        <div class="spinner-border text-primary" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -65,6 +65,7 @@ export default {
     data() {
         return {
             email:'',
+            searchQuery: '',
             posts:null,
             isLoading: true
         }
@@ -78,6 +79,18 @@ computed:{
     }
 
 },
+watch: {
+    data: {
+      handler(newVal) {
+        if (newVal?.articles) {
+          this.posts = newVal.articles;
+          this.loading = false;
+        }
+      },
+      immediate: true
+    }
+},
+
     async created() {
   const config = useRuntimeConfig(); // load your .env
 
@@ -100,15 +113,9 @@ computed:{
     this.isLoading = false;
   }
 },
-
-    methods: {
-        handleSearch() {
-            
-        }
-    },
     
 }
 </script>
-<style lang="">
+<style>
     
 </style>

@@ -23,7 +23,7 @@ h2{
 {
     color: #9B3655 !important;
 }
-.form-control, .form-control:focus, .btn:focus
+.form-control, .form-control:focus, .btn:focus, button:focus
 {
     box-shadow: none !important;
     

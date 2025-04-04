@@ -13,7 +13,7 @@
     </div>
     
 </template>
-<script lang="ts">
+<script>
 
 import NavBar from '../components/NavBar.vue'
 import AppFooter from '../components/AppFooter.vue'
