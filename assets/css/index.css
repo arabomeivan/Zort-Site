@@ -1,4 +1,4 @@
-body
+body, .text-secondary
 {
     font-family: 'Urbanist';
     color: #6c757d;
@@ -10,6 +10,11 @@ h2{
 {
     background-color: #9B3655 !important;
 }
+.bg-primary-opac
+{
+    background-color: #f9f5ff;
+    font-size: small;
+}
 .fs-large
 {
     font-size: 88px;
@@ -18,10 +23,15 @@ h2{
 {
     color: #9B3655 !important;
 }
-.form-control, .btn:focus
+.form-control, .form-control:focus, .btn:focus
 {
     box-shadow: none !important;
     
+}
+.form-control:focus
+{
+    border-width: 1;
+    border-color: #9B3655;
 }
 .card
 {

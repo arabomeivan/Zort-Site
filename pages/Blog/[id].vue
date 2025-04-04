@@ -1,6 +1,6 @@
 <template>
-    <div>
-        A Blog Details
+    <div class="py-5">
+      
     </div>
 </template>
 <script>

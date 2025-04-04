@@ -69,5 +69,10 @@ export default defineNuxtConfig({
         { id: 'description', name: 'description', content: 'Zort' }
       ]
       }
+      },
+      runtimeConfig: {
+        public: {
+          newsApiKey: process.env.NEWS_API_KEY
+        }
       }
 })

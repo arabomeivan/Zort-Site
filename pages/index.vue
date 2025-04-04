@@ -19,7 +19,7 @@
       <button type="button" class="btn text-white">Download on the App Store</button>
                    </div>
     
-                   <div class="mb-2 d-flex justify-content-center justify-content-lg-between w-50 gap-5 gap-lg-0 mx-auto mx-md-0">
+                   <div class="mb-2 d-flex justify-content-center justify-content-lg-between w-50 w-lg-100 gap-5 gap-lg-0 mx-auto mx-md-0">
     
                     <div class="border border-grey rounded-2 p-2 d-flex gap-1 text-primary">
                        
@@ -194,7 +194,7 @@
 Facts you need to put your trust in us
           </h2>
 
-          <div class="d-md-flex d-block gap-3 justify-content-center my-5">
+          <div class="d-lg-flex d-block gap-3 justify-content-center my-5">
           <div class="card bg-light rounded-3 p-5 border-0 mb-3 mb-lg-0">
             <div class="card-body text-center">
               <h1 class="text-primary">10K</h1>

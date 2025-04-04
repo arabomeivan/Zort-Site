@@ -1,5 +1,5 @@
 <template>
-    <nav :class="pageScrolledY ? 'navbar navbar-expand-lg navbar-light bg-light fixed-top':'navbar navbar-expand-lg navbar-light bg-transparent fixed-top'">
+    <nav :class="pageScrolledY ? 'navbar navbar-expand-lg navbar-light bg-light fixed-top':'navbar navbar-expand-lg navbar-light bg-light bg-lg-transparent fixed-top'">
         <div class="container">
             <div class="d-flex justify-content-end w-100 d-lg-none">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
                 <NuxtLink :to="link.path" :class=" isActive===link.path? 'nav-link active text-secondary':'nav-link text-secondary' " aria-current="page" href="#"><b>{{ link.label }}</b></NuxtLink>
               </li>
             </ul>
-            <div class="d-md-flex">
+            <div class="d-lg-flex">
 
                 <NuxtLink to="/signup"><button class="btn text-white border-0" type="submit">Sign Up</button></NuxtLink>
             </div>
@@ -39,7 +39,7 @@ export default {
                 },
                 {
                     label: 'About Us',
-                    path: '#about',
+                    path: '/#about',
                     id: 1
                 },
                 {
