@@ -6,19 +6,19 @@
 <div>
     <div class="mb-4" style="text-align:justify;">
         <label for="exampleFormControlInput1" class="form-label text-secondary">First Name<span class="text-danger">*</span></label>
-        <input id="exampleFormControlInput1" type="text" class="form-control" placeholder="First Name">
+        <input v-model="fName" id="exampleFormControlInput1" type="text" class="form-control" placeholder="First Name">
       </div>
       <div class="mb-4" style="text-align:justify;">
         <label for="exampleFormControlInput1" class="form-label text-secondary">Last Name<span class="text-danger">*</span></label>
-        <input id="exampleFormControlInput1" type="text" class="form-control" placeholder="Last Name">
+        <input v-model="lName" id="exampleFormControlInput1" type="text" class="form-control" placeholder="Last Name">
       </div>
       <div class="mb-4" style="text-align:justify;">
         <label for="exampleFormControlInput1" class="form-label text-secondary">Email<span class="text-danger">*</span></label>
-        <input id="exampleFormControlInput1" type="email" class="form-control" placeholder="Email">
+        <input v-model="email" id="exampleFormControlInput1" type="email" class="form-control" placeholder="Email">
       </div>
       <div class="mb-4" style="text-align:justify;">
         <label for="exampleFormControlTextarea1" class="form-label">Message <span class="text-danger">*</span></label>
-        <textarea id="exampleFormControlTextarea1" class="form-control" rows="3"/>
+        <textarea v-model="message" id="exampleFormControlTextarea1" class="form-control" rows="3"/>
       </div>
 
       <div class="d-flex justify-content-center">
@@ -40,7 +40,48 @@
 </template>
 <script>
 export default {
-    name:'ContactUs'
+    name:'ContactUs',
+    data() {
+        return {
+            fName: '',
+            lName:'',
+            email: '',
+            message: '',
+        }
+    },
+
+    methods: {
+        async contactUs()
+        {
+            try{
+                const response = await fetch("https://formspree.io/f/xgvwjwge", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          subject: this.subject,
+        }),
+      });
+
+      if (response.ok) {
+        alert("Received! will reach out to you");
+        this.name = "";
+        this.email = "";
+        this.message = "";
+      } else {
+        alert("There was an error submitting the form.");
+      }
+            }
+            catch(error){
+                console.error(error);
+            }
+        }
+    }
 }
 </script>
 <style lang="">
