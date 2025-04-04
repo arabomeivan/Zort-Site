@@ -51,7 +51,7 @@
       <div :class=" appMounted ? 'animate__animated animate__slideInLeft col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0':'col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0'">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
-        src="../public/liveanalyis.gif"
+        src="liveanalyis.gif"
         width="498"
         height="575"
         />
@@ -79,7 +79,7 @@
       <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
-        src="../public/trackbets.gif"
+        src="trackbets.gif"
         width="498"
         height="575"
         />
@@ -93,7 +93,7 @@
       <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center mb-3 mb-lg-0">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
-        src="../public/liveodds.gif"
+        src="liveodds.gif"
         width="498"
         height="575"
         />
