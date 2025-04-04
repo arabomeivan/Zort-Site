@@ -1,8 +1,45 @@
-# Nuxt Minimal Starter
+# Zort — AI-Powered Sports Betting Insights
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to **Zort**, an AI-powered betting revolution built with Nuxt 3.  
+Zort uses the power of artificial intelligence and data analytics to give you the edge in sports betting. By analyzing real-time odds, historical trends, and market patterns, Zort transforms complex data into actionable insights — all in a smooth, responsive web experience.
 
-## Setup
+🚀 [Live Demo → zort-site.netlify.app](https://zort-site.netlify.app/)
+
+---
+
+## 🧠 Project Features
+
+- **Dynamic Routing**  
+  Built using Nuxt 3’s file-based dynamic routing to create individual article pages from API data.
+
+- **REST API Integration**  
+  Articles are fetched dynamically via REST API calls for real-time and scalable content.
+
+- **Pagination**  
+  Seamlessly loads articles in chunks to keep things fast and organized.
+
+- **Performance Optimization**  
+  Leveraged Nuxt’s built-in tools like the `<NuxtImg>` component for optimized image loading and responsive design.
+
+- **Options API**  
+  Used the Vue Options API for simplicity and cleaner structure — ideal for small to mid-size projects.
+
+- **Bootstrap**  
+  Styled with Bootstrap for a clean, responsive UI with minimal effort.
+
+---
+
+## 💻 Tech Stack
+
+- [Nuxt 3](https://nuxt.com)
+- Vue 3 (Options API)
+- Bootstrap 5
+- Pinia (for state management)
+- Nuxt Image (for optimized image handling)
+
+---
+
+## 🔧 Setup
 
 Make sure to install dependencies:
 
@@ -18,58 +55,3 @@ yarn install
 
 # bun
 bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

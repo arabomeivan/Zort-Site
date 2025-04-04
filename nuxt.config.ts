@@ -70,6 +70,9 @@ export default defineNuxtConfig({
       ]
       }
       },
+      image: {
+        domains: ['images.unsplash.com']
+      },
       runtimeConfig: {
         public: {
           newsApiKey: process.env.NEWS_API_KEY
