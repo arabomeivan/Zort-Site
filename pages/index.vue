@@ -41,7 +41,7 @@
                 
                </div>
                <div :class="appMounted ? 'animate__animated animate__slideInRight col-lg-6 d-flex mt-3 mt-lg-0':'col-lg-6 d-flex mt-3 mt-lg-0' ">
-                <NuxtImg class="img-fluid align-self-center d-none d-lg-block" src="/HerooImage.png" />
+                <NuxtImg class="img-fluid align-self-center d-none d-lg-block" src="HerooImage.png" />
              </div>
             </div>
         </section>
@@ -51,7 +51,7 @@
       <div :class=" appMounted ? 'animate__animated animate__slideInLeft col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0':'col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0'">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
-        src="https://i.pinimg.com/originals/15/f6/c7/15f6c787116f624ecc9684ca9fa24b9d.gif"
+        src="../public/liveanalyis.gif"
         width="498"
         height="575"
         />
@@ -79,7 +79,7 @@
       <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
-        src="https://media1.tenor.com/m/tD8F-WrsD6AAAAAC/graph-chart.gif"
+        src="../public/trackbets.gif"
         width="498"
         height="575"
         />
@@ -93,7 +93,7 @@
       <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center mb-3 mb-lg-0">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
-        src="https://i.pinimg.com/originals/f8/8a/ca/f88acab7ffd127b4465659500aa0538f.gif"
+        src="../public/liveodds.gif"
         width="498"
         height="575"
         />
