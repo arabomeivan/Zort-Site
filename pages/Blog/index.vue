@@ -23,7 +23,7 @@
             :key="posts"
             class="col-12 col-sm-6 col-lg-4 d-flex mb-4"
           >
-            <NuxtLink :to="'/blog/'" class="text-decoration-none w-100">
+            <NuxtLink to="#" class="text-decoration-none w-100">
               <div class="card border-0 h-100">
                 <img :src="posts.urlToImage" class="card-img-top rounded-2" alt="...">
                 <div class=" py-2 d-flex flex-column">
