@@ -3,7 +3,7 @@
 
         <section class="welcome-section py-5">
             <div class="row">
-                <div class="col-lg-6">
+                <div :class="appMounted ? 'animate__animated animate__slideInLeft col-lg-6':'col-lg-6'">
                    <b class="fs-large text-center text-md-justify">
                     <span class="text-black">Transform Your</span> <br>
                     <span class="text-primary">Betting Game</span>
@@ -40,15 +40,15 @@
     
                 
                </div>
-               <div class="col-lg-6 d-flex mt-3 mt-lg-0">
+               <div :class="appMounted ? 'animate__animated animate__slideInRight col-lg-6 d-flex mt-3 mt-lg-0':'col-lg-6 d-flex mt-3 mt-lg-0' ">
                 <NuxtImg class="img-fluid align-self-center d-none d-lg-block" src="/HerooImage.png" />
              </div>
             </div>
         </section>
         
-        <section class="live-analytics-section py-5" id="about">
+        <section id="about" class="live-analytics-section py-5">
             <div class="row">
-      <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0">
+      <div :class=" appMounted ? 'animate__animated animate__slideInLeft col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0':'col-lg-6 d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0'">
         <NuxtImg 
         class="img-fluid align-self-center d-block rounded-2" 
         src="https://i.pinimg.com/originals/15/f6/c7/15f6c787116f624ecc9684ca9fa24b9d.gif"
@@ -57,7 +57,7 @@
         />
           
       </div>
-      <div class="col-lg-6">
+      <div :class=" appMounted ? 'animate__animated animate__slideInRight col-lg-6':' col-lg-6' ">
         <h2 class="text-primary">Live Analysis</h2>
 
         <p class="fs-5">
@@ -243,6 +243,16 @@ export default {
     name:'HomePage',
     components:{
       TestimonialSection
+    },
+    data(){
+      return{
+        appMounted: false
+      }
+    },
+
+    mounted()
+    {
+      this.appMounted = true;
     }
   
     
