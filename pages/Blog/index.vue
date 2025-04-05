@@ -101,7 +101,7 @@ watch: {
 
   try {
     const {data, status} = await useAsyncData('newsData', () =>
-      $fetch('https://newsapi.org/v2/top-headlines?country=us&category=businesss', {
+      $fetch('https://newsapi.org/v2/top-headlines?country=us&category=business', {
         headers: {
           'X-Api-Key': config.public.newsApiKey
         }
@@ -113,10 +113,13 @@ watch: {
       this.posts = data.value.articles;
       this.isLoading = false;
     }
+    else
+    {
+        this.isLoading = false;
+    }
   } catch (error) {
     console.error('Something went wrong:', error);
     this.isLoading = false;
-    this.error = true;
   }
 }
     
