@@ -15,6 +15,10 @@
         </div>
       </div>
 
+      <div v-else-if="filteredPosts.length === 0" class="py-5 text-center">
+        <h2>No results found</h2>
+        <p>Please try a different search term or check your spelling.</p>
+      </div>
 
       <div v-if="!isLoading" class="py-5 container">
         <div class="row justify-content-center">
@@ -91,12 +95,13 @@ watch: {
     }
 },
 
+
     async created() {
   const config = useRuntimeConfig(); // load your .env
 
   try {
     const {data, status} = await useAsyncData('newsData', () =>
-      $fetch('https://newsapi.org/v2/top-headlines?country=us&category=business', {
+      $fetch('https://newsapi.org/v2/top-headlines?country=us&category=businesss', {
         headers: {
           'X-Api-Key': config.public.newsApiKey
         }
@@ -111,8 +116,9 @@ watch: {
   } catch (error) {
     console.error('Something went wrong:', error);
     this.isLoading = false;
+    this.error = true;
   }
-},
+}
     
 }
 </script>
