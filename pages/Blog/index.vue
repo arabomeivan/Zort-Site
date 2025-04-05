@@ -97,16 +97,11 @@ watch: {
 
 
     async created() {
-  const config = useRuntimeConfig(); // load your .env
 
   try {
-    const {data, status} = await useAsyncData('newsData', () =>
-      $fetch('https://newsapi.org/v2/top-headlines?country=us&category=business', {
-        headers: {
-          'X-Api-Key': config.public.newsApiKey
-        }
-      })
-    );
+    const { data, status } = await useAsyncData('newsData', () =>
+  $fetch('/api/news')
+);
 
     if(status._value==='success')
     {
