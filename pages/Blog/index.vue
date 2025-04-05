@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div v-else-if="filteredPosts.length === 0" class="py-5 text-center">
+      <div v-else-if="posts===null || filteredPosts.length===0" class="py-5 text-center">
         <h2>No results found</h2>
         <p>Please try a different search term or check your spelling.</p>
       </div>
@@ -29,7 +29,7 @@
           >
             <NuxtLink to="#" class="text-decoration-none w-100">
               <div class="card border-0 h-100">
-                <img :src="posts.urlToImage" class="card-img-top rounded-2" alt="...">
+                <img :src="posts.urlToImage===null?'noImageavailable.png':posts.urlToImage" class="card-img-top rounded-2" alt="...">
                 <div class=" py-2 d-flex flex-column">
                   <span class="border-primary border text-primary bg-primary-opac rounded-5 p-2 w-50">
                     8 min read
@@ -42,7 +42,7 @@
                         class=" rounded-circle"
                         width="48"
                         height="48"
-                        :src="posts.urlToImage"
+                        :src="posts.urlToImage===null?'noImageavailable.png':posts.urlToImage"
                       />
                     </div>
                     <div>
