@@ -1,4 +1,5 @@
 <template>
+  <!-- parent tag -->
   <div>
     <nav :class="pageScrolledY ? 'navbar navbar-expand-lg navbar-light bg-light fixed-top':'navbar navbar-expand-lg navbar-light bg-light bg-lg-transparent fixed-top'">
       <div class="container">
