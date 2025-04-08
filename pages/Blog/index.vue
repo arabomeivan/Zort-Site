@@ -42,7 +42,7 @@
                         class=" rounded-circle"
                         width="48"
                         height="48"
-                        :src="posts.urlToImage===null?'noImageavailable.png':posts.urlToImage"
+                        :src="posts.urlToImage===null?'/noImageavailable.png':posts.urlToImage"
                       />
                     </div>
                     <div>
