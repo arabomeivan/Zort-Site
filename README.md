@@ -33,7 +33,7 @@ Zort uses the power of artificial intelligence and data analytics to give you th
 ## 💻 Tech Stack
 
 - [Nuxt 3](https://nuxt.com)
-- Vue 3 (Options API)
+- Vue 3
 - Bootstrap 5
 - Pinia (for state management)
 - Nuxt Image (for optimized image handling)
